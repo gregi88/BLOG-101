@@ -4,16 +4,14 @@
     <div class="post-title" >
       <%= post.title %>
     </div>
-  <div class="img">
-    <% if post.photos? %>
-    <% post.photos.each do |photos| %>
-      <li> <%= cl_image_tag post.photos, height: 300, width: 300, crop: :fill %> </li>
-      <% end %>
-    <% end %>
-  </div>
+
     <div class="post-content">
       <%= post.content %>
     </div>
+    <div>
+
+    </div>
+
   <% end %>
   <%= link_to 'Create new post', new_post_path, class: "btn-primary" %>
 </div>

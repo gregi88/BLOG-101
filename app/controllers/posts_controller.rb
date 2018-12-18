@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post_album = @post.post_album.build
   end
 
   def create
@@ -45,7 +46,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, photos: [])
+    params.require(:post).permit(:title, :content, album: [])
   end
 
   # def find_post
