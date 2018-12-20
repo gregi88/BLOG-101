@@ -11,21 +11,13 @@
         <div class="row">
           <%= f.input :content %>
         </div>
+        <div>
+        <%= f.file_field :photos, multiple: true %>
 
-         <div class="field">
-          <%= f.label :photos, @direct_mode ? "Add new photos (Client-side)" : "Add new photos (Server-side)" %>
-          <br>
-          <% if @direct_mode %>
-           <%= f.cl_image_upload :photos, multiple: true %>
-            <% else %>
-            <%= f.file_field :photos, multiple: true %>
-          <% end %>
-         </div>
-        <br>
+       </div>
        <div>
         <%= f.submit "Create post" , class: "btn-primary", id: "form-button-home" %>
       </div>
-      <br>
       <div>
         <%= link_to 'Back to Posts', posts_path, class: "btn-primary" %>
       </div>
