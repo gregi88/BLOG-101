@@ -5,13 +5,20 @@
   <% @posts.each do |post| %>
     <div class="post-title" >
       <h4> <%= post.title %> </h4>
-      <%= post.title %>
     </div>
   <div class="img">
     <% if post.photos? %>
     <% post.photos.each do |photos| %>
 
-      <%= cl_image_tag post.photos, width: 200, height: 150, crop: :scale %>
+
+
+
+
+      <img class="image" src="<%= post.photos %>">
+
+
+      <%= cl_image_tag post.photos%>
+
       <% end %>
     </div>
     <% end %>

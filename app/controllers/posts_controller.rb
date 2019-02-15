@@ -39,7 +39,6 @@ class PostsController < ApplicationController
     @post.destroy
 
     redirect_to posts_path
-
   end
 
   private
@@ -51,5 +50,4 @@ class PostsController < ApplicationController
   # def find_post
   #   @post = Post.find(params[:id])
   # end
-
 end
